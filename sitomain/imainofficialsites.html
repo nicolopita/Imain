@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>I Main</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('sfondoargento.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-family: 'Lora', serif;
+      color: #000000;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 40px;
+      color: #2c3e50;
+      font-size: 4em;
+      font-family: 'Playfair Display', serif;
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+      letter-spacing: 2px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 280px;
+      height: 400px;
+      margin: 15px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .card:hover {
+      box-shadow: 0 0 15px #00aaff;
+    }
+
+    .card img {
+      width: 100%;
+      height: 50%;
+      object-fit: cover;
+      transition: all 0.3s ease;
+    }
+
+    .card-content {
+      padding: 15px;
+      flex-grow: 1;
+    }
+
+    .card-content h2 {
+      margin: 0 0 10px 0;
+      color: #0077aa;
+      font-family: 'Lora', serif;
+    }
+
+    .card-content p {
+      margin: 0;
+      color: #333;
+    }
+
+    .instagram-links {
+      margin-top: 10px;
+    }
+
+    .instagram-links a {
+      display: block;
+      color: #0077aa;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .expandable {
+      display: none;
+      margin-top: 10px;
+      color: #666;
+    }
+
+    .card.expanded {
+      width: 600px;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    .card.expanded img {
+      width: 50%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card.expanded .card-content {
+      width: 50%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .card.expanded .expandable {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>I Main</h1>
+  <div class="container">
+
+    <!-- Card 1 -->
+    <div class="card" onclick="toggleCard(this)">
+      <img src="nicolo.jpg" alt="Nicolò">
+      <div class="card-content">
+        <h2>Nicolò</h2>
+        <div class="instagram-links">
+          <a href="https://instagram.com/pitarresi_nicolo_" target="_blank">@pitarresi_nicolo_</a>
+          <a href="https://instagram.com/baresi_spam" target="_blank">@baresi_spam</a>
+        </div>
+        <div class="expandable">
+          <p>🔥Baresi🔥<br>-L’uomo del clutch 🤯<br>-Si siede torto 😵‍💫<br>-Acchiappa solo 10/10 😜<br>-Vodka e gin nel sangue 🩸</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card" onclick="toggleCard(this)">
+      <img src="Giuseppe.jpg" alt="Giuseppe">
+      <div class="card-content">
+        <h2>Giuseppe</h2>
+        <div class="instagram-links">
+          <a href="https://instagram.com/pe_ppe20" target="_blank">@pe_ppe20</a>
+          <a href="https://instagram.com/giu.lemani1" target="_blank">@giu.lemani1</a>
+        </div>
+        <div class="expandable">
+          <p>⚠️Peppe prime⚠️<br>-Da sempre nel prime 🔝<br>-Illuministo? 🤓<br>-Occupato 🤎🔐<br>-Colazione cornetto e gin tonic🍹</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card" onclick="toggleCard(this)">
+      <img src="salvo.jpg" alt="Salvo">
+      <div class="card-content">
+        <h2>Salvo</h2>
+        <div class="instagram-links">
+          <a href="https://instagram.com/_salvatorebarone_" target="_blank">@_salvatorebarone_</a>
+          <a href="https://instagram.com/baronazzos" target="_blank">@baronazzos</a>
+        </div>
+        <div class="expandable">
+          <p>❄️Barozzi❄️<br>-La mente 🧠<br>-Per lui è tutto da top 🙅<br>-Sommelier del pacchio 👅<br>-Alcolista non anonimo 🍷</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card" onclick="toggleCard(this)">
+      <img src="antonio.jpg" alt="Antonio">
+      <div class="card-content">
+        <h2>Antonio</h2>
+        <div class="instagram-links">
+          <a href="https://instagram.com/_antonio.cinquemani_" target="_blank">@_antonio.cinquemani_</a>
+          <a href="https://instagram.com/fivehands_spam" target="_blank">@fivehands_spam</a>
+        </div>
+        <div class="expandable">
+          <p>💥Fivehands💥<br>-Creatore dei Main 💣<br>-Alcolizzato🍺<br>-Demolitore di sticchio 🌼<br>-Tirchio a merda 💸 (va migliorando)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card" onclick="toggleCard(this)">
+      <img src="filippo.jpg" alt="Filippo">
+      <div class="card-content">
+        <h2>Filippo</h2>
+        <div class="instagram-links">
+          <a href="https://instagram.com/filippo_tolentino" target="_blank">@filippo_tolentino</a>
+          <a href="https://instagram.com/pippo_spam07" target="_blank">@pippo_spam07</a>
+        </div>
+        <div class="expandable">
+          <p>🕸️Tarantella🕸️<br>-L’uomo Nero 🧑🏾<br>-Stiamo Calmi ‼️🚨<br>-Figa? Bravo ma non si applica 😘<br>-Barcolla ma non molla 🥃</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card" onclick="toggleCard(this)">
+      <img src="luca.jpg" alt="Luca">
+      <div class="card-content">
+        <h2>Luca</h2>
+        <div class="instagram-links">
+          <a href="https://instagram.com/_luca.brunone_" target="_blank">@_luca.brunone_</a>
+        </div>
+        <div class="expandable">
+          <p>🧊Brumotti🧊<br>-Creatore di Nickname 💡<br>-Professionista del "Cala Cala" 🥂<br>-Esploratore di Caverne 🏔️<br>-Novena Player 🎷</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="card" onclick="toggleCard(this)">
+      <img src="rosario.jpg" alt="Rosario">
+      <div class="card-content">
+        <h2>Rosario</h2>
+        <div class="instagram-links">
+          <a href="https://instagram.com/rosario_calista" target="_blank">@rosario_calista</a>
+          <a href="https://instagram.com/rooo_privatooo" target="_blank">@rooo_privatooo</a>
+        </div>
+        <div class="expandable">
+          <p>👀Calisto👀<br>-Ragazzo Pazzo 🤪<br>-Inglese 10/10<br>-Sono tutte sue 🫦<br>-Ubriaco pure la mattina 🍸</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function toggleCard(clickedCard) {
+      const allCards = document.querySelectorAll('.card');
+      allCards.forEach(card => {
+        if (card !== clickedCard) {
+          card.classList.remove('expanded');
+        }
+      });
+      clickedCard.classList.toggle('expanded');
+    }
+  </script>
+
+</body>
+</html>
